@@ -1,29 +1,30 @@
 package kelompok5.TK1;
 
-import java.text.DecimalFormat;
 import java.util.Scanner;
 public class SoalDua {
     public static void main(String args[]) {
-        DecimalFormat df = new DecimalFormat("0.00");
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Masukkan bilangan ke-1: ");
-        int a = scan.nextInt();
-        System.out.print("Masukkan bilangan ke-2: ");
-        int b = scan.nextInt();
-        System.out.print("Masukkan bilangan ke-3: ");
-        int c = scan.nextInt();
+        int a;
+        int b;
+        int c;
+        double jumlah ;
+        double kurang ;
+        Scanner masukan = new Scanner(System.in);
+
+        //masukan input bilangan 1
+        System.out.print("Masukan bilangan ke-1: ");
+        a = masukan.nextInt();
+        //masukan input bilangan 2
+        System.out.print("Masukan bilangan ke-2: ");
+        b = masukan.nextInt();
+        //masukan input bilangan 3
+        System.out.print("Masukan bilangan ke-3: ");
+        c = masukan.nextInt();
+
+        jumlah = Math.log10(a) + Math.log10(b) + Math.log10(c);
+        kurang = Math.cos(a) - Math.sin(b) - Math.tan(c);
+
         System.out.println();
-        System.out.println(a + " Log 10 = " + Math.log10(a));
-        System.out.println(b + " Log 10 = " + Math.log10(b));
-        System.out.println(c + " Log 10 = " + Math.log10(c));
-        Double penambahan = Math.log10(a) + Math.log10(b) + Math.log10(c);
-        System.out.println("Total Log 10 dari Bil1 + Bil 2 + Bil 3 = " + df.format(penambahan));
-        System.out.println();
-        System.out.println("COS = " + Math.cos(a));
-        System.out.println("SIN = " + Math.sin(b));
-        System.out.println("TAN = " + Math.tan(c));
-        double pengurangan = Math.cos(a) - Math.sin(b) - Math.tan(c);
-        System.out.println();
-        System.out.println("Total COS - SIN - TAN = " + df.format(pengurangan));
+        System.out.println("Hasil penjumlahan logaritma basis 10 dari ketiga bilangan = " + jumlah);
+        System.out.println("Hasil pengurangan dari Cos angka1, Sin angka2, Tan angka3 = " + kurang);
     }
 }
